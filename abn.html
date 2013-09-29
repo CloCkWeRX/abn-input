@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="abn.js"></script>
+  <script type="text/javascript">
+  	$().ready(function () {
+		$('.abn').bindABNControls();
+	});
+  </script>
+  <title>JQuery ABN Input</title>
+  <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" />
+ </head>
+ <body>
+ 	<div class="container">
+ 		<div class="page-header">
+	 		<h1>ABN Validator</h1>
+	 	</div>
+		<p>A simple jquery plugin to give your inputs validation handling for Australian Business Numbers (ABN)</p>
+		<p>Example:</p>
+		<p><span class="label label-success">Valid</span><br />
+		93 649 344 120
+		</p>
+		
+		<p><span class="label label-danger">Invalid</span><br />
+			<div class="span2">93 649 344 122</div>
+		</p>
+		<h3>Demo</h3>
+	 	<form method="get">
+		  <input type="text" class="abn"  placeholder="XX XXX XXX XXX" />
+		  <input type="submit" />
+		</form>
+
+		<h3>Usage</h3>
+		<p>Include the library</p>
+		<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="abn.js"&gt;&lt;/script&gt;</code></pre>
+
+		<p>Add hooks to your inputs</p>
+		<pre><code>&lt;input class="abn" placeholder="XX XXX XXX XXX" /&gt;</code></pre>
+
+		<p>Bind the controls</p>
+		<pre><code>&lt;script type="text/javascript"&gt;
+  $().ready(function () {
+    $('.abn').bindABNControls();
+  });
+&lt;/script&gt;</code></pre>
+ </body>
+</html>
+
